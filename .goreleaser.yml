@@ -1,0 +1,8 @@
+builds:
+  - binary: webter
+    goos:
+      - windows
+      - darwin
+      - linux
+    goarch:
+      - arm64
