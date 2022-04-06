@@ -55,7 +55,7 @@ func (hs *hostSession) run() (err error) {
 	// colorstring.Printf(`[bold]Paste it in the terminal after the webtty command` +
 	// 	"\n[bold]Or in a browser: [reset]https://maxmcd.github.io/webtty/\n\n")
 
-	colorstring.Printf(`Browser: [reset]https://maxmcd.github.io/webtty/` + hs.offer.TenKbSiteLoc)
+	colorstring.Printf(`Browser: [reset]https://webter-web-maddygoround1.vercel.app/sd/` + hs.offer.TenKbSiteLoc)
 	body, err := pollForResponse(hs.offer.TenKbSiteLoc)
 	if err != nil {
 		log.Println(err)
