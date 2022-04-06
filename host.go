@@ -32,7 +32,7 @@ func (hs *hostSession) run() (err error) {
 	if err = hs.init(); err != nil {
 		return
 	}
-	colorstring.Printf("[bold]Setting up a Webter connection.\n\n")
+	colorstring.Printf("[bold]Setting up a Webter connection.\n")
 	// if hs.oneWay {
 	// 	colorstring.Printf(
 	// 		"Warning: One-way connections rely on a third party to connect. " +
@@ -55,7 +55,7 @@ func (hs *hostSession) run() (err error) {
 	// colorstring.Printf(`[bold]Paste it in the terminal after the webtty command` +
 	// 	"\n[bold]Or in a browser: [reset]https://maxmcd.github.io/webtty/\n\n")
 
-	colorstring.Printf(`Browser: [reset]https://webter-web-maddygoround1.vercel.app/sd/` + hs.offer.TenKbSiteLoc)
+	colorstring.Printf(`Browser: [reset][bold]https://ssh.webter.fun/sd/` + hs.offer.TenKbSiteLoc)
 	body, err := pollForResponse(hs.offer.TenKbSiteLoc)
 	if err != nil {
 		log.Println(err)

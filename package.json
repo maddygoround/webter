@@ -1,6 +1,6 @@
 {
   "name": "@maddygoround/webter",
-  "version": "0.0.9",
+  "version": "0.1.2",
   "description": "Serve your current directory",
   "main": "index.js",
   "scripts": {
