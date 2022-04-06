@@ -1,11 +1,11 @@
 {
   "name": "@maddygoround/webter",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Serve your current directory",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node postinstall.js install",
-    "preuninstall": "node postinstall.js uninstall"
+    "postinstall": "go-npm install",
+    "preuninstall": "go-npm uninstall"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,8 @@
     "postinstall.js"
   ],
   "dependencies": {
+    "global": "^4.4.0",
+    "go-npm": "^0.1.9",
     "mkdirp": "^1.0.4"
   },
   "goBinary": {
