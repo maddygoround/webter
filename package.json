@@ -1,0 +1,34 @@
+{
+  "name": "@wachira/html-serve",
+  "version": "0.0.0",
+  "description": "Serve your current directory",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "go-npm install",
+    "preuninstall": "go-npm uninstall"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bywachira/html-serve.git"
+  },
+  "keywords": [
+    "cli",
+    "automation"
+  ],
+  "author": "tesh254",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bywachira/html-serve/issues"
+  },
+  "homepage": "https://github.com/bywachira/html-serve#readme",
+  "dependencies": {
+    "@wachira/html-serve": "^1.0.3",
+    "global": "^4.4.0",
+    "go-npm": "^0.1.9"
+  },
+  "goBinary": {
+    "name": "webter",
+    "path": "./bin",
+    "url": "https://github.com/bywachira/html-serve/releases/download/v{{version}}/html-serve_{{version}}_{{platform}}_{{arch}}.tar.gz"
+  }
+}
