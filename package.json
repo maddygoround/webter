@@ -1,11 +1,11 @@
 {
   "name": "@maddygoround/webter",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Serve your current directory",
   "main": "index.js",
   "scripts": {
-    "postinstall": "go-npm install",
-    "preuninstall": "go-npm uninstall"
+    "postinstall": "node postinstall.js install",
+    "preuninstall": "node postinstall.js uninstall"
   },
   "repository": {
     "type": "git",
@@ -15,16 +15,17 @@
     "cli",
     "automation"
   ],
-  "author": "tesh254",
+  "author": "maddygoround",
   "license": "MIT",
+  "files": [
+    "dist",
+    "postinstall.js"
+  ],
   "dependencies": {
-    "@maddygoround/webter": "^0.0.1",
-    "global": "^4.4.0",
-    "go-npm": "^0.1.9"
+    "mkdirp": "^1.0.4"
   },
   "goBinary": {
     "name": "webter",
-    "path": "./bin",
-    "url": "https://github.com/maddygoround/webter/releases/download/v{{version}}/webter_{{version}}_{{platform}}_{{arch}}.tar.gz"
+    "path": "./bin"
   }
 }
