@@ -28,6 +28,7 @@
   },
   "goBinary": {
     "name": "webter",
-    "path": "./bin"
+    "path": "./bin",
+    "url": "https://github.com/maddygoround/webter/releases/download/v{{version}}/webter_{{version}}_{{platform}}_{{arch}}.tar.gz"
   }
 }
