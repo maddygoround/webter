@@ -21,7 +21,7 @@ jobs:
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@master
         with:
-          workdir: ./webter
+          workdir: ./
           version: latest
           args: release --rm-dist
         env:
