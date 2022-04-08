@@ -5,8 +5,10 @@ name: Node.js Package
 
 on:
   push:
-    tags:
-      - "*" # triggers only if push new tag version, like `0.8.4`
+    branches: [ main ]
+  # push:
+  #   tags:
+  #     - "*" # triggers only if push new tag version, like `0.8.4`
 
 jobs:
   build:
@@ -25,7 +27,10 @@ jobs:
           sudo apt install goreleaser
 
       - name: Build golang
-        run: goreleaser release
+        run: |
+          ls -l 
+          goreleaser release
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
