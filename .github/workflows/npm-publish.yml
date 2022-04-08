@@ -19,17 +19,12 @@ jobs:
         uses: mathieudutour/github-tag-action@v6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Create a GitHub release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ steps.tag_version.outputs.new_tag }}
-          name: Release ${{ steps.tag_version.outputs.new_tag }}
-          body: ${{ steps.tag_version.outputs.changelog }}
       
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
           go-version: 1.17
+          
       - name: Install Gorelease
         run: | 
           echo 'deb [trusted=yes] https://repo.goreleaser.com/apt/ /' | sudo tee /etc/apt/sources.list.d/goreleaser.list
@@ -37,7 +32,7 @@ jobs:
           sudo apt install goreleaser
       
       - name: Build
-        run: gorelease release
+        run: goreleaser release
           
       - name: Publish Package 
         uses: actions/setup-node@v3
