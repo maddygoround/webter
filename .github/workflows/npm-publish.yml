@@ -5,16 +5,15 @@ name: Node.js Package
 
 on:
   push:
-    branches: [ main ]
-  # push:
-  #   tags:
-  #     - "*" # triggers only if push new tag version, like `0.8.4`
+    tags:
+      - "*" # triggers only if push new tag version, like `0.8.4`
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    
+      - uses: actions/checkout@v3
+      
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
